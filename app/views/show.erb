@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Blog Post App</title>
+</head>
+<body>
+  <h2>Blog Post <%=@post.id%></h2>
+  <p>
+    <strong><%=@post.name%></strong><br>
+    <%=@post.content%>
+  </p>
+  <p>
+    <form action="/posts/<%=@post.id%>/delete" method="post">
+      <input type="hidden" id="hidden" name="_method" value="delete"/>
+      <input type="submit" value="Delete Post"/>
+    </form>
+  </p>
+</body>
+</html>
